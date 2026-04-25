@@ -1,0 +1,76 @@
+:root {
+  --bg: #f5f7fa;
+  --text: #222;
+  --card: #ffffff;
+}
+
+body.dark {
+  --bg: #121212;
+  --text: #f5f5f5;
+  --card: #1e1e1e;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: all 0.4s ease;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background: var(--card);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  text-align: center;
+  transition: 0.4s;
+}
+
+.card:hover {
+  transform: translateY(-5px) scale(1.03);
+}
+
+.toggle {
+  margin-top: 20px;
+  width: 80px;
+  height: 40px;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #89f7fe, #66a6ff);
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.toggle:hover {
+  box-shadow: 0 0 15px rgba(102,166,255,0.6);
+}
+
+.circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+  font-size: 16px;
+}
+
+body.dark .circle {
+  transform: translateX(40px);
+}
+
+body.dark .toggle {
+  background: linear-gradient(135deg, #434343, #000000);
+}
